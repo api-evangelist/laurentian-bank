@@ -1,0 +1,90 @@
+aid: laurentian-bank
+name: Laurentian Bank of Canada
+review:
+  question: Does Laurentian Bank of Canada expose a first-party public developer API or downloadable API specification?
+  answer: false
+  date: '2026-07-23'
+  reviewer: API Evangelist
+findings:
+  summary: |
+    Laurentian Bank of Canada publishes no public developer portal and no
+    first-party API. Host probes on 2026-07-23 for developer.laurentianbank.ca,
+    api.laurentianbank.ca, developer.blcbanque.ca, and developer.b2bbank.com all
+    failed to resolve (no host / connection could not be established), while only
+    the retail marketing sites www.laurentianbank.ca and www.b2bbank.com return
+    HTTP 200. Unlike RBC (developer.rbc.com) and other Big Six banks, Laurentian
+    runs no API ecosystem, and no OpenAPI/Swagger definition is available to
+    harvest. No authentication model (OAuth2/OIDC, API key, or mTLS) is exposed
+    because there is no public API surface. Consumer data access to the bank is
+    aggregator-mediated today (screen-scraping / credential-based access via
+    providers such as Flinks and Plaid), not a documented first-party API. The
+    bank has published no FDX participation or US-style 1033 posture; Canada's
+    federal Consumer-Driven Banking framework is legislated but not yet
+    operational, so participation remains voluntary. This is an honest
+    identity-only (stub) profile.
+  developerPortal:
+    documented: false
+    note: No developer.* or api.* subdomain resolves for laurentianbank.ca, blcbanque.ca, or b2bbank.com.
+  firstPartyApi:
+    documented: false
+  downloadableSpec:
+    documented: false
+    note: No OpenAPI/Swagger/AsyncAPI or Postman collection is publicly available; nothing harvested into openapi/.
+  fdxParticipant:
+    documented: false
+  posture1033:
+    documented: false
+    note: US 1033 does not apply (Canadian institution). Canadian Consumer-Driven Banking (CDB) framework is legislated but not yet live; no CDB/FDX posture published by the institution.
+  authModel:
+    documented: false
+    note: No public API, therefore no documented auth model.
+  aggregatorAccess:
+    documented: true
+    note: Consumer data access is available via third-party aggregators (e.g. Flinks, Plaid) through screen-scraping / credential-based methods, not a first-party API.
+  canadianRails:
+    interac:
+      note: As a Schedule I bank, Laurentian offers Interac e-Transfer to customers, but documents no public API around it.
+    paymentsCanada:
+      note: Member of Payments Canada shared clearing/settlement infrastructure (Lynx / RTR modernization); no public API documented.
+  transports:
+    - protocol: REST
+      documented: false
+      note: No documented public REST API.
+    - protocol: GraphQL
+      documented: false
+    - protocol: WebSocket
+      documented: false
+  probes:
+    - url: https://www.laurentianbank.ca/en
+      status: 200
+      note: Retail/marketing site (English). Live.
+    - url: https://www.b2bbank.com
+      status: 200
+      note: B2B Bank subsidiary marketing site. Live.
+    - url: https://developer.laurentianbank.ca
+      status: 000
+      note: Host does not resolve / no developer portal.
+    - url: https://api.laurentianbank.ca
+      status: 000
+      note: Host does not resolve / no public API host.
+    - url: https://developer.blcbanque.ca
+      status: 000
+      note: Host does not resolve.
+    - url: https://developer.b2bbank.com
+      status: 000
+      note: Host does not resolve.
+sources:
+  - url: https://www.laurentianbank.ca/en
+    type: Website
+    note: Corporate/retail site; no developer or API section found in navigation.
+  - url: https://en.wikipedia.org/wiki/Laurentian_Bank_of_Canada
+    type: Reference
+    note: Institution facts - Schedule I bank founded 1846, TSX LB, ~CA$47.4B assets (2024), ~3,000 employees, subsidiaries, Dec 2025 proposed Fairstone sale.
+  - url: https://www.openbankingtracker.com/country/canada
+    type: Reference
+    note: Canadian open-banking landscape; first-party bank API portals limited to RBC and other Big Six - Laurentian not listed.
+actions:
+  openapiHarvested: false
+  reason: |
+    No public API or downloadable specification exists to harvest. Record is
+    identity-only; consumer access to the institution is aggregator-mediated.

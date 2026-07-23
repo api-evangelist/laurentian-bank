@@ -1,0 +1,53 @@
+aid: laurentian-bank
+url: https://raw.githubusercontent.com/api-evangelist/laurentian-bank/refs/heads/main/apis.yml
+name: Laurentian Bank of Canada
+kind: company
+description: >-
+  Laurentian Bank of Canada (Banque Laurentienne du Canada) is a
+  Montreal-headquartered Schedule I chartered bank, founded in 1846 as the
+  Montreal City and District Savings Bank and listed on the Toronto Stock
+  Exchange as LB. With roughly CA$47 billion in assets, about 3,000 employees,
+  and approximately 1.5 million clients, it serves personal, commercial, and
+  capital-markets customers - concentrated in Quebec with commercial offices
+  across Canada - through subsidiaries including B2B Bank, Laurentian Bank
+  Securities, and LBC Capital. The bank operates no public developer portal and
+  exposes no first-party or FDX-style data-access API; consumer data access is
+  aggregator-mediated today (screen-scraping via providers such as Flinks and
+  Plaid), and Canada's federal Consumer-Driven Banking framework remains
+  legislated but not yet operational, so participation is voluntary. In December
+  2025 the bank announced a proposed sale to Fairstone Bank of Canada, with
+  National Bank of Canada acquiring its retail operations.
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+tags:
+- Financial Services
+- Banking
+- Canada
+- Schedule I Bank
+- Retail Banking
+- Quebec
+- Interac
+- Data Aggregation
+created: '2026-07-23'
+modified: '2026-07-23'
+specificationVersion: '0.19'
+apis: []
+common:
+- type: Website
+  url: https://www.laurentianbank.ca/en
+- type: InvestorRelations
+  url: https://www.laurentianbank.ca/en/about-us/investor-relations
+- type: Blog
+  url: https://news.laurentianbank.ca/
+- type: LinkedIn
+  url: https://ca.linkedin.com/company/banque-laurentienne
+- type: PrivacyPolicy
+  url: https://www.laurentianbank.ca/en/personal/privacy-and-security
+- type: TermsOfService
+  url: https://www.laurentianbank.ca/en/personal/legal-notice
+- type: Security
+  url: https://www.laurentianbank.ca/en/personal/ways-to-bank/security
+- type: Support
+  url: https://www.laurentianbank.ca/en/contact-us
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

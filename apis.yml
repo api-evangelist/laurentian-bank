@@ -32,6 +32,8 @@ modified: '2026-07-23'
 specificationVersion: '0.19'
 apis: []
 common:
+- type: DomainSecurity
+  url: security/laurentian-bank-domain-security.yml
 - type: Website
   url: https://www.laurentianbank.ca/en
 - type: InvestorRelations

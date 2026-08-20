@@ -19,6 +19,15 @@ description: >-
   National Bank of Canada acquiring its retail operations.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
+- Financial-Services
+- Banking
+- Canada
+- Schedule I Bank
+- Retail Banking
+- Quebec
+- Interac
+- Data Aggregation
+tags_raw:
 - Financial Services
 - Banking
 - Canada

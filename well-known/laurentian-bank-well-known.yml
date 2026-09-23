@@ -2,19 +2,24 @@ generated: '2026-07-23'
 method: searched
 source: live probes of the bank's primary host /.well-known/ surface
 host: https://www.laurentianbank.ca
-note: >-
-  Laurentian Bank operates no public developer portal and exposes no
-  first-party API, so no /.well-known/ discovery documents are published.
-  All probed paths returned 404. Recorded for audit / re-run idempotency;
+note: Laurentian Bank operates no public developer portal and exposes no first-party API, so no /.well-known/
+  discovery documents are published. All probed paths returned 404. Recorded for audit / re-run idempotency;
   no WellKnown or SecurityTxt pointer is wired because none is present.
-documents:
-- path: /.well-known/security.txt
-  status: 404
-- path: /.well-known/openid-configuration
-  status: 404
-- path: /.well-known/oauth-authorization-server
-  status: 404
-- path: /.well-known/api-catalog
-  status: 404
-- path: /.well-known/ai-plugin.json
-  status: 404
+hosts:
+- host: https://www.laurentianbank.ca
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+x-shape-fix:
+  converted: '2026-08-20'
+  from: documents
+  note: Rewritten into hosts[] -> documents[], the only shape well_known_docs() in score.rb reads. A served
+    .well-known surface recorded in any other shape scores as absent.

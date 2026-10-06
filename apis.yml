@@ -59,10 +59,12 @@ tags_raw:
 - Interac
 - Financial-Services
 created: '2026-07-23'
-modified: '2026-07-23'
+modified: '2026-10-06'
 specificationVersion: '0.23'
 apis: []
 common:
+- url: https://news.laurentianbank.ca/latest-news?pagetemplate=rss
+  type: BlogRSS
 - type: DomainSecurity
   url: security/laurentian-bank-domain-security.yml
 - type: Website

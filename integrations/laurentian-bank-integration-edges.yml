@@ -1,0 +1,18 @@
+generated: '2026-10-12'
+method: none
+source:
+- https://zapier.com/apps/laurentian-bank/integrations
+- https://zapier.com/apps/laurentian-bank-of-canada/integrations
+- https://n8n.io/integrations/laurentian-bank/
+- https://composio.dev/toolkits/laurentian-bank
+- https://monid.ai/tools/laurentian-bank
+checked:
+- https://composio.dev/toolkits/laurentian-bank
+- https://monid.ai/tools/laurentian-bank
+- https://n8n.io/integrations/laurentian-bank/
+- https://zapier.com/apps/laurentian-bank-of-canada/integrations
+- https://zapier.com/apps/laurentian-bank/integrations
+summary: null
+marketplace_apps: []
+edges: []
+templates: []
